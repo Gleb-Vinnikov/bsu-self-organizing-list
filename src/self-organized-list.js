@@ -17,7 +17,15 @@ class SelfOrganizedList {
     }
 
     size() {
+        if (!this.head) return 0;
 
+        else {
+            var a = this.head;
+            for (var i = 1; a.next; i++) {
+                a = a.next;
+            }
+            return i;
+        }
     }
 
     at(index) {
