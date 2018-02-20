@@ -18,10 +18,7 @@ class SelfOrganizedList {
         if (!this.head) {
             this.head = node;
         } else {
-            var a = this.head;
-            while (a.next) {
-                a = a.next;
-            }
+            var a = this.tail;
             a.next = node;
             a.next.prev = a;
             this.tail.prev = a;
