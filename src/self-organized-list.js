@@ -72,7 +72,27 @@ class SelfOrganizedList {
     }
 
     removeAt(index) {
-
+         if (index === 0) {
+            if (this.size() === 1) {
+                this.head = null;
+                this.tail = null;
+            }else {
+                this.head = this.head.next;
+                this.head.prev = null;
+            }
+        } else {
+            var a = this.head;
+            for (var i = 0; i < index - 1; i++) {
+                a = a.next;
+            }
+            if (a.next.next) {
+                a.next = a.next.next;
+                a.next.prev = a;
+            } else {
+                a.next = null;
+                this.tail = a;
+            }
+        }
     }
 
     moveToFront(node) {
