@@ -95,10 +95,14 @@ class SelfOrganizedList {
         }
     }
 
-   moveToFront(node) {
-}
+    moveToFront(node) {
+
+    }
 
     reorganize(data) {
+
+    }
+
 }
 
 module.exports = {
