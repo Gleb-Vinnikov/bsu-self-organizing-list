@@ -96,32 +96,9 @@ class SelfOrganizedList {
     }
 
    moveToFront(node) {
-        if (this.size() > 1 && node != this.head) {
-            if (node == this.tail) {
-                this.tail = this.tail.prev;
-            } else {
-                node.next.prev = node.prev;
-            }
-
-            var a = this.head;
-            node.prev.next = node.next;
-            node.next = a;
-            a.prev = node;
-            node.prev = null;
-            this.head = node;
-        }
-    }
+}
 
     reorganize(data) {
-        var node = this.findNode(data);
-        if (node !== null) {
-            this.moveToFront(node);
-            return true;
-        }
-        return false;
-    }
-    }
-
 }
 
 module.exports = {
