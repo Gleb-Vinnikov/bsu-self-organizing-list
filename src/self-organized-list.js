@@ -41,11 +41,23 @@ class SelfOrganizedList {
     }
 
     at(index) {
-
+        if (this.size() <= index) return null;
+        else {
+            var a = this.head;
+            for (var i = 0; i != index; i++) {
+                a = a.next;
+            }
+            return a.data;
+        }
     }
 
     findNode(data) {
-
+        var a = this.head;
+        while (a) {
+            if (a.data == data) return a;
+            a = a.next;
+        }
+        return null;
     }
 
     toArray() {
